@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Driver Emergency
+    </ion-title> <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons end>
+   
+    </ion-buttons>  
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ 
+    <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="loadMap()"><ion-icon name="compass"></ion-icon></button>
+    <button ion-fab (click)="showCurrentLocation()"><ion-icon ios="ios-navigate" md="md-navigate"></ion-icon></button>
+    <button ion-fab (click)="doAlert()">  <ion-icon ios="ios-boat" md="md-boat"></ion-icon></button>
+<button ion-fab (click)="showBusStops()"> <ion-icon ios="ios-pin" md="md-pin"></ion-icon></button>
+
+ 
+    </ion-fab-list>
+  </ion-fab>
+  <div #map id="map"></div>  
+</ion-content> 
+
+ 
+   

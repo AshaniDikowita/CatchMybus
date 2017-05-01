@@ -1,0 +1,31 @@
+<ion-header>
+ 
+</ion-header>
+
+
+<ion-content padding class="bgAuth">
+        <ion-list>
+            
+            <ion-item class="title" center>  <img src="img/CMB.JPG"/></ion-item>
+
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input [(ngModel)]="email" type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input [(ngModel)]="password" type="password"></ion-input>
+            </ion-item>
+        </ion-list>
+   
+         <button ion-button round block (click)="login()">Log In</button>
+        
+          <ion-item> </ion-item>
+          
+          <button ion-button block outline color="facebook" (click)="fblogin()">
+              <ion-icon name="logo-facebook"></ion-icon>Login with facebook
+          </button>
+                        
+        <button ion-button block clear  (click)="SignUp()">Not have an account? Register Now</button> 
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Buses</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding ng-controller="myAppController">
+  <div>
+      <ion-item>
+    <ion-label stacked>Bus Number</ion-label>
+    <ion-input type="text" [(ngModel)]="busNum"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Brand</ion-label>
+    <ion-input type="text" [(ngModel)]="busBrand"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Model</ion-label>
+    <ion-input type="text" [(ngModel)]="busmodel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Model Year</ion-label>
+    <ion-input type="text" [(ngModel)]="busModelYear"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Mileage</ion-label>
+    <ion-input type="text" [(ngModel)]="busMileage"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Color</ion-label>
+    <ion-input type="text" [(ngModel)]="busColor"></ion-input>
+  </ion-item>
+
+    <ion-list>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select>
+        <ion-option value="normal">Normal</ion-option>
+        <ion-option value="semi">Semi-Luxury</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-card-content>
+  <button ion-button color="secondary" (click)="openPage()">Go To Owner Details</button>
+  </ion-card-content><br>
+  <button ion-button (click)="showConfirm()">Add Details</button>
+  <button ion-button color="secondary">Cancel</button>
+    
+  </div>
+  
+  
+</ion-content>
+<!-- [(ngModel)]="type"-->

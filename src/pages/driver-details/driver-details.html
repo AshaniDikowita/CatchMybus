@@ -1,0 +1,101 @@
+<!--
+  Generated template for the DriverDetails page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+   <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Driver-Details</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+
+
+<ion-card>
+  <ion-card-header>
+   Profile
+  </ion-card-header>
+
+</ion-card>
+
+<ion-item *ngFor="let item of DriverDetails | async">
+ <ion-label >Driver Name :{{item.FirstName}}  </ion-label>
+
+   <ion-input [(ngModel)]="FName"  placeholder="FirstName" clearInput></ion-input>
+</ion-item>
+
+
+
+<ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label >Last Name:{{item.LastName}}</ion-label>
+
+  <ion-input   [(ngModel)]="LastName" placeholder="Last Name" clearInput></ion-input>
+ 
+</ion-item>
+
+<ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>NIC Number:{{item.NICNo}}</ion-label>
+  <ion-input  [(ngModel)]="NICNo" placeholder="NIC Number" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Address 1 :{{item.Ads1}}</ion-label>
+  <ion-input   [(ngModel)]="Ads1" placeholder="Your Address 1" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Address 2:{{item.Ads2}}</ion-label>
+  <ion-input  [(ngModel)]="Ads2"  placeholder="Your Address 2" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>City :{{item.City}}</ion-label>
+  <ion-input   [(ngModel)]="City" placeholder="Your City" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Account Number:{{item.AcNo}}</ion-label>
+  <ion-input   [(ngModel)]="AcNo" placeholder="Your Account Number" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Date of Join:{{item.DOJ}}</ion-label>
+  <ion-input [(ngModel)]="DOJ"  placeholder="DOJ" clearInput></ion-input>
+ 
+</ion-item>
+
+<ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Bus Number :{{item.BusNo}}</ion-label>
+  <ion-input [(ngModel)]="BusNo" placeholder="Your Bus Number" clearInput></ion-input>
+ 
+</ion-item>
+
+
+<ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Relation Status:{{item.Status}}</ion-label>
+  <ion-input [(ngModel)]="Status"  placeholder=" Status" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Phone Number:{{item.Phone}}</ion-label>
+  <ion-input [(ngModel)]="Phone"  placeholder="Your Phone Number" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Bus Owner's Name:{{item.Owner}}</ion-label>
+  <ion-input  [(ngModel)]="Owner" placeholder="Your Owner's Name" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>Date Of Birth:{{item.DOB}}</ion-label>
+  <ion-input [(ngModel)]="DOB"  placeholder="Your DOB" clearInput></ion-input>
+ 
+</ion-item><ion-item *ngFor="let item of DriverDetails | async">
+  <ion-label>email Address:{{item.email}}</ion-label>
+  <ion-input [(ngModel)]="email"  placeholder="Your mail address" clearInput></ion-input>
+ 
+</ion-item>
+<br>
+<button ion-button color="primary" (click)="doConfirm()"  >Update Details</button>
+<button ion-button color="secondary" (click)="nxtPage()">Cancel</button>
+</ion-content>

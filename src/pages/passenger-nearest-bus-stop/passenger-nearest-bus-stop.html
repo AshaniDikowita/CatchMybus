@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Map
+    </ion-title>
+    <ion-buttons end>
+      <!--<button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>-->
+    </ion-buttons>  
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <h2 class="h2">Bus Stop</h2>
+  <br>
+  <button  ion-button id="page-button8" color="primary" (click)="showBusStops()" >Search Bus Stops </button><br><br>
+  <br>
+  <div #map id="map"></div>  
+</ion-content>

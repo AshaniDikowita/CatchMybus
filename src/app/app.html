@@ -1,0 +1,56 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+    <ion-content>
+    <ion-list  *ngIf="user == 'c'">
+      <button menuClose ion-item (click)="openPage(pages[0])">{{pages[0].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[1])">{{pages[1].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[2])">{{pages[2].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[20])">{{pages[20].title}}</button>
+      <button menuClose ion-item (click)="logout()">Log out</button>
+    </ion-list>
+
+
+    <ion-list  *ngIf="user == 'd'">
+      <button menuClose ion-item (click)="openPage(pages[3])">{{pages[3].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[4])">{{pages[4].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[5])">{{pages[5].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[6])">{{pages[6].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[1])">{{pages[1].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[20])">{{pages[20].title}}</button>
+      <button menuClose ion-item (click)="logout()">Log out</button>
+    </ion-list>
+
+       <ion-list  *ngIf="user == 'e'">
+      <button menuClose ion-item (click)="openPage(pages[13])">{{pages[13].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[14])">{{pages[14].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[16])">{{pages[16].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[17])">{{pages[17].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[18])">{{pages[18].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[2])">{{pages[2].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[5])">{{pages[5].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[20])">{{pages[20].title}}</button>
+      <button menuClose ion-item (click)="logout()">Log out</button>
+    </ion-list>
+
+       <ion-list  *ngIf="user == 'f'">
+      <button menuClose ion-item (click)="openPage(pages[7])">{{pages[7].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[8])">{{pages[8].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[9])">{{pages[9].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[11])">{{pages[11].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[12])">{{pages[12].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[23])">{{pages[23].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[24])">{{pages[24].title}}</button>
+      <button menuClose ion-item (click)="openPage(pages[20])">{{pages[20].title}}</button>
+      <button menuClose ion-item (click)="logout()">Log out</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

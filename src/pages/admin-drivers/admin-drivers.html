@@ -1,0 +1,29 @@
+<!--
+  Generated template for the AdminDrivers page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Drivers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button>Search driver</button>
+  <button ion-button>View Driver Details</button>
+
+  <ion-item *ngFor="let item of DriverDetails | async">
+    <ion-label>Driver Name:{{item.FirstName}}{{item.LastName}}</ion-label>
+  </ion-item><br>
+
+  <button ion-button color="secondary">Cancel</button>
+
+</ion-content>

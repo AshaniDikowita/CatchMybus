@@ -1,0 +1,61 @@
+<!--
+  Generated template for the PassengerTimeTable page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Time Table</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+    <div>
+      <form>
+
+<ion-list>
+
+  <!--<ion-item>
+    <ion-label floating>Starting from </ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Going to</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+    <button ion-button color="primary">
+      Search
+    </button>
+
+   <button ion-button color="secondary">
+      Cancel
+    </button>-->
+    
+    <ion-item *ngFor= "let timetable of timetable | async">
+       <form>
+      <p>Arrivaltime: {{timetable.Arrivaltime}}</p><br>
+       <p> Bus No:{{timetable.Busno}}</p><br>
+      <p>From:{{timetable.From}}</p><br>
+      <p>Seat Allocation Style:{{timetable.SeatAllocationStyle}}</p><br>
+      <p>Start Time:{{timetable.StartTime}}</p><br>
+      <p>To:{{timetable.To}}</p><br>
+      <p>Type:{{timetable.Type}}
+       </form>
+    </ion-item>
+
+
+</ion-list>
+<!--<button ion-button (click)="openPage()" block color="primary">GO </button>-->
+
+ 
+  </form>
+  </div>
+</ion-content>

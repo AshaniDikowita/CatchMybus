@@ -1,0 +1,58 @@
+<ion-row *ngFor="let item of items"><!--first row-->
+    <h1></h1>
+    <ion-col>
+        <div>
+              <button class="seat" (click)="ChangeColor(item[0],items)" *ngIf="item[0].hideStatus == false">
+                  <img *ngIf="!item[0].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[0].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+     <ion-col>
+        <div>
+              <button  class="seat" (click)="ChangeColor(item[1],items)" *ngIf="item[1].hideStatus == false">
+                  <img *ngIf="!item[1].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[1].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+    <ion-col>
+        <div>
+            <button  class="seat" (click)="ChangeColor(item[4],items)" *ngIf="item[4] != undefined && item[4].hideStatus == false">
+                  <img *ngIf="!item[4].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[4].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+    <ion-col>
+        <div>
+            <button  class="seat" (click)="ChangeColor(item[5],items)" *ngIf="item[5] != undefined">
+                  <img *ngIf="!item[5].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[5].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+
+    <ion-col>
+        <div>
+              <button class="seat" (click)="ChangeColor(item[2],items)" *ngIf="item[2].hideStatus == false">
+                  <img *ngIf="!item[2].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[2].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+   <ion-col>
+        <div>
+              <button class="seat"(click)="ChangeColor(item[3],items)" *ngIf="item[3].hideStatus == false">
+                  <img *ngIf="!item[3].sheetStatus" src="img/seat-belt 128.png"/>
+                  <img *ngIf="item[3].sheetStatus" src="img/seat-beltselected128.png"/>
+              </button>
+        </div>
+    </ion-col>
+
+  </ion-row>

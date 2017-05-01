@@ -1,0 +1,86 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Search Bus</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  
+  <div>
+    <form>
+      <ion-card>
+  <img src="img/bus.jpg">
+       </ion-card>
+
+  <ion-list>
+  <ion-item>
+    <ion-label floating>Starting from </ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Going to</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+</ion-list>
+<!--<button ion-button (click)="openPage()" block color="primary">SEARCH BUS </button>-->
+ <button ion-button color="primary" [navPush]="pushPage" [navParams]="params" (click)="AddBookingDetails()">
+      Search
+</button>
+ <button ion-button color="primary">
+      cost & distance
+    </button>
+     <button ion-button color="secondary">
+      Cancel
+    </button>
+    </form>
+  </div>
+
+
+<div>
+  <ion-card>
+     <ion-item>
+    <ion-icon name="bus" item-left large></ion-icon>
+    <h2>17</h2>
+    <p>NP 53703</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="clock" item-left large ></ion-icon>
+    <span>18 min</span>
+    <span>(2.6 mi)</span>
+    <button ion-button icon-left clear item-right>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  </ion-item>
+</ion-card>
+</div>
+
+<div>
+  <ion-card>
+  <ion-item>
+    <ion-icon name="bus" item-left large></ion-icon>
+    <h2>17</h2>
+    <p>WP 55723</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="clock" item-left large ></ion-icon>
+    <span>15 min</span>
+    <span>(2.3 mi)</span>
+    <button ion-button icon-left clear item-right>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  </ion-item>
+</ion-card>
+</div>
+</ion-content>
